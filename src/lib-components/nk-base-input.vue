@@ -4,6 +4,7 @@
     v-slot="{ errors }"
     :name="fieldName"
     :field-set-class="fieldSetClass"
+    :field-set-error-class="fieldSetErrorClass"
     :rules="rules"
     :readonly="readonly"
     :label="label"
@@ -51,6 +52,10 @@
         default: null
       },
       fieldSetClass: {
+        type: String,
+        default: ""
+      },
+      fieldSetErrorClass: {
         type: String,
         default: ""
       },

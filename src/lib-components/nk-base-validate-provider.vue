@@ -15,7 +15,10 @@
       >{{ label }}</label>
       <slot :errors="errors" />
 
-      <div class="text-danger">
+      <div
+        class="text-danger"
+        :fieldSetErrorClass="fieldSetErrorClass"
+      >
         {{ errors[0] }}
       </div>
     </b-form-group>
@@ -49,6 +52,10 @@
         default: ""
       },
       fieldSetClass: {
+        type: String,
+        default: ""
+      },
+      fieldSetErrorClass: {
         type: String,
         default: ""
       },
