@@ -1,6 +1,6 @@
 {
   "name": "nk-boostrap-base-components-lib",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "dist/nk-boostrap-base-components-lib.ssr.js",
   "browser": "dist/nk-boostrap-base-components-lib.esm.js",
@@ -21,7 +21,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "build & publish": "npm version patch --force && npm publish && npm run build && npm publish"
   },
   "dependencies": {
     "bootstrap": "^5.0.2",
