@@ -146,6 +146,11 @@
         return hasMaxLength ? Number($attrs["maxlength"]) : null;
       }
     },
+    watch: {
+      model(value) {
+        this.value = value;
+      }
+    },
     methods: {
       onEventChange(e) {
         if (this.isNumber) {
