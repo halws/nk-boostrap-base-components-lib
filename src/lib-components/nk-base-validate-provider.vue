@@ -13,7 +13,7 @@
         v-if="label"
         :for="id"
       >{{ label }}</label>
-      <slot :errors="errors"></slot>
+      <slot :errors="errors" />
 
       <div class="text-danger">
         {{ errors[0] }}
@@ -23,45 +23,45 @@
 </template>
 
 <script>
-import { ValidationProvider, extend, localize } from "vee-validate";
-import pl from "vee-validate/dist/locale/pl.json";
-import * as rules from "vee-validate/dist/rules";
+  import { ValidationProvider, extend, localize } from "vee-validate";
+  import pl from "vee-validate/dist/locale/pl.json";
+  import * as rules from "vee-validate/dist/rules";
 
-// install rules and localization
-Object.keys(rules).forEach((rule) => {
-  extend(rule, rules[rule]);
-});
+  // install rules and localization
+  Object.keys(rules).forEach(rule => {
+    extend(rule, rules[rule]);
+  });
 
-localize("pl", pl);
+  localize("pl", pl);
 
-export default {
-  name: "nk-base-validate-provider",
-  components: {
-    ValidationProvider,
-  },
-  props: {
-    rules: {
-      type: String,
-      default: null,
+  export default {
+    name: "NkBaseValidateProvider",
+    components: {
+      ValidationProvider
     },
-    label: {
-      type: String,
-      default: "",
-    },
-    fieldSetClass: {
-      type: String,
-      default: "",
-    },
-    id: {
-      type: String,
-      default: "",
-    },
-    name: {
-      type: String,
-      default: "",
-    },
-  },
-};
+    props: {
+      rules: {
+        type: String,
+        default: null
+      },
+      label: {
+        type: String,
+        default: ""
+      },
+      fieldSetClass: {
+        type: String,
+        default: ""
+      },
+      id: {
+        type: String,
+        default: ""
+      },
+      name: {
+        type: String,
+        default: ""
+      }
+    }
+  };
 </script>
 
 <style>
