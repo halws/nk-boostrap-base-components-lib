@@ -1,6 +1,6 @@
 {
   "name": "nk-boostrap-base-components-lib",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/nk-boostrap-base-components-lib.ssr.js",
   "browser": "dist/nk-boostrap-base-components-lib.esm.js",
