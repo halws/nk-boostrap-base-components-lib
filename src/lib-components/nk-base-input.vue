@@ -147,8 +147,11 @@
       }
     },
     watch: {
-      model(value) {
-        this.value = value;
+      model: {
+        immediate: true,
+        handler(value) {
+          this.value = value;
+        }
       }
     },
     methods: {
