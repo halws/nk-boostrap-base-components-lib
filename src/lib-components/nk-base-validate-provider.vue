@@ -17,7 +17,7 @@
 
       <div
         class="text-danger"
-        :fieldSetErrorClass="fieldSetErrorClass"
+        :class="fieldSetErrorClass"
       >
         {{ errors[0] }}
       </div>
