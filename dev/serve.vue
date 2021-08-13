@@ -16,6 +16,11 @@
         model: "22222",
         model2: "sdasdasd"
       };
+    },
+    methods: {
+      enter(e) {
+        console.log("enter", e);
+      }
     }
   });
 </script>
@@ -32,6 +37,7 @@
           <NkBaseInput
             v-model="model"
             label="test"
+            @keyup.enter="enter"
           />
         </b-col>
         <b-col cols="3">

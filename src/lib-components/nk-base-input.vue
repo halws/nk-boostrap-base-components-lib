@@ -27,8 +27,7 @@
       :debounce="300"
       :formatter="formatter"
       :autocomplete="$attrs['type']==='password'?'on':'off'"
-      @input="onEventChange($event)"
-      @change="onEventChange($event)"
+      v-on="$listeners"
     />
   </BaseValidateProvider>
 </template>

@@ -15,8 +15,7 @@
       :state="state"
       v-bind="$attrs"
       :value="model"
-      @input="$emit('input',$event)"
-      @change="$emit('change',$event)"
+      v-on="$listeners"
     />
   </BaseValidateProvider>
 </template>
