@@ -6,7 +6,6 @@
     :field-set-class="fieldSetClass"
     :field-set-error-class="fieldSetErrorClass"
     :rules="rules"
-    :readonly="readonly"
     :label="label"
   >
     <b-form-input
@@ -14,7 +13,7 @@
       v-mask="mask"
       v-bind="$attrs"
       class="base-input"
-      :class="[{'is-invalid': errors.length,'pt-0 pl-0':readonly},inputClass]"
+      :class="[{'is-invalid': errors.length},inputClass]"
       debounce="500"
       :autocomplete="$attrs['type']==='password'?'on':'off'"
       v-on="$listeners"
@@ -67,10 +66,6 @@
       model: {
         type: [String, Number],
         default: ""
-      },
-      readonly: {
-        type: Boolean,
-        default: false
       }
     },
     data() {
