@@ -9,12 +9,9 @@
     :label="label"
   >
     <b-form-textarea
-      :id="id"
       v-model="value"
       :class="`form-control ${errors.length?'is-invalid':''}`"
-      :state="state"
       v-bind="$attrs"
-      :value="model"
       v-on="$listeners"
     />
   </BaseValidateProvider>
