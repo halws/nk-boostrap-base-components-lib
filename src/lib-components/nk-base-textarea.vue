@@ -6,6 +6,7 @@
     :field-set-class="fieldSetClass"
     :field-set-error-class="fieldSetErrorClass"
     :rules="rules"
+    :readonly="'readonly' in $attrs"
     :label="label"
   >
     <b-form-textarea

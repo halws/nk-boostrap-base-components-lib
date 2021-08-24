@@ -9,10 +9,14 @@
       class="position-relative"
       :class="fieldSetClass"
     >
-      <label
+      <component
+        :is="'readonly' in $attrs?'small':'label'"
         v-if="label"
+        :class="'readonly' in $attrs && 'text-black-50'"
         :for="id"
-      >{{ label }}</label>
+      >
+        {{ label }}
+      </component>
       <slot :errors="errors" />
 
       <div
