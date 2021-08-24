@@ -22,7 +22,8 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "build & publish": "npm version patch --force && npm run build && npm publish"
+    "build & publish": "npm version patch --force && npm run build && npm publish",
+    "prepare": "npm run prebuild && npm run build"
   },
   "dependencies": {
     "bootstrap": "^5.0.2",
