@@ -10,9 +10,9 @@
       :class="fieldSetClass"
     >
       <component
-        :is="'readonly' in $attrs?'small':'label'"
+        :is="readonly?'small':'label'"
         v-if="label"
-        :class="'readonly' in $attrs && 'text-black-50'"
+        :class="readonly && 'text-black-50'"
         :for="id"
       >
         {{ label }}
@@ -47,6 +47,10 @@
       ValidationProvider
     },
     props: {
+      readonly: {
+        type: Boolean,
+        default: false
+      },
       rules: {
         type: String,
         default: null
